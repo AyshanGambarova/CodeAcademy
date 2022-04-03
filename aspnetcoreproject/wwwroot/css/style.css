@@ -1,0 +1,89 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+#header img{
+    font-size: 20px;
+}
+#banner h1{
+    font-size: 60px;
+}
+.breadcrumb-item a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    color: white!important;
+}
+.category{
+    border: 1px solid black;
+    border-color: #cccccc;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    transition: all 3s ease;
+}
+.category a{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.image img{
+    width: 200px;
+    height: 200px;
+}
+.us{
+    padding: 25px 0px;
+}
+.us h3{
+    font-size: 20px;
+}
+input,select{
+    border: none!important;
+    padding: 15px!important;
+  
+}
+.form{
+    padding: 50px 0px;
+}
+#contact h2{
+    font-size: 50px;
+}
+.owl-next{
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    font-size: 65px!important;
+    color: white!important;
+}
+
+.owl-prev{
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    font-size: 65px!important;
+    color: white!important;
+}
+.owl-prev:hover , .owl-next:hover{
+    background-color: none!important;
+}
+.current{
+    font-weight: bold!important;
+}
+#card img{
+font-size: 15px!important;
+}
+#groups{
+    background-color: #f4f5f8;
+}
+.profile-photo{
+    width: 350px;
+    border-radius: 50%;
+}

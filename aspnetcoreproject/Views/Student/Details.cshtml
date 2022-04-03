@@ -1,0 +1,24 @@
+﻿@model Student
+<section id="banner">
+    <div class="item" style="background-color: #33ca7f;">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-6">
+                    <img src="~/uploads/students/@Model.Image" class="profile-photo">
+                </div>
+                <div class="col-6">
+                    <div style="padding: 130px 0px 50px 0px;">
+                        <h1 class="fw-bold text-white">@Model.Name @Model.Surname</h1>
+                        <h3 class="text-white">CAP: @Model.CAP</h3>
+                        <p class="text-white">Qrup: @Model.Group.Name</p>
+                        <p class="text-white">Müəllim: @Model.Group.Teacher.Name</p>
+                        <p class="text-white">Qrup sahəsi:@Model.Group.Category.Name</p>
+                        <p class="text-white">Email: @Model.Email</p>
+                        <p class="text-white">Telefon: @Model.PhoneNumber</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

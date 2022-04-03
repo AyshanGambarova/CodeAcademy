@@ -1,0 +1,180 @@
+﻿@model HomeViewModel
+<section id="banner">
+    <div class="owl-carousel owl-theme">
+        @foreach (Banner item in Model.Banners)
+        {
+            <div class="item" style="background-color: @item.BackgroundColor;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div style="padding: 130px 0px;">
+                                <h1 class="fw-bold text-white pb-5 pt-3">@item.Title</h1>
+                                <p class="text-white pb-5 pe-5">
+                                    @item.Text
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row align-items-center justify-content-start">
+            <div class="col-6">
+                <div class="pe-5">
+                    <div class="top">
+                        <h2>
+                            @Html.Raw(@Model.LeftOfCategory.Title)
+                        </h2>
+                    </div>
+                    <div class="line mt-3 mb-3">
+                        <img src="~/images/sep-line.png">
+                    </div>
+                    <div class="bottom">
+                        <p>
+                            @Model.LeftOfCategory.Text
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row align-items-center justify-content-end pt-5">
+                    <div class="col-12">
+                        @foreach (Category item in Model.Categories)
+                        {
+                            <div class="category">
+                                <div class="pt-3 pb-5">
+                                    <img src="~/uploads/categories/@item.Icon">
+                                </div>
+                                <div>
+                                    <a href="/group/index/@item.Id" class="text-black text-decoration-none">
+                                        @item.Name
+                                    </a>
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="us">
+    <div class="container">
+        <div class="row align-items-center justify-content-start">
+            <div class="col-6">
+                <div class="top">
+                    <h2>
+                        @Html.Raw(Model.TopOfUs.Title)
+                    </h2>
+
+                </div>
+                <div class="line mt-3 mb-3">
+                    <img src="~/images/sep-line.png">
+                </div>
+                <div class="bottom pb-5 pe-5">
+                    <p>
+
+                        @Model.TopOfUs.Text
+
+                    </p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                @foreach (AboutUs item in Model.AboutUs)
+                {
+                    <div class="col-3">
+                        <div class="image align-items-center">
+                            <img src="~/uploads/us/@item.Image">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="us">
+                            <h3 class="fw-bold">
+                                @item.Title
+                            </h3>
+                            <p>
+                                @item.Text
+                            </p>
+                            <div>
+                                <a href="#" class="text-decoration-none text-black fw-bold">@item.ButtonText</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" style="background-color: #f4f5f8;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="praktiki-tedris-metodu-300x300">
+                    <div>
+                        <h2 class="fw-lighter">
+                            @Model.LeftOfContact.FirstSubTitle
+                        </h2>
+                    </div>
+                    <div class="ps-4 pe-5">
+                        <h2 class="fw-bolder pb-3 ps-4">
+                            @Model.LeftOfContact.LastSubTitle
+                        </h2>
+                        <p>
+                            @Model.LeftOfContact.Text
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <form action="/home/addmessage" method="post">
+                    <div class="form align-items-center justify-content-center pb-5">
+                        <div class="container">
+                            <div class="row ">
+                                <div class="col-6 mb-3">
+                                    <input type="text" id="name" name="name" class="form-control shadow-none" placeholder="Ad">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <input type="text" id="surname" name="surname" class="form-control shadow-none" placeholder="Soyad">
+                                </div>
+                                <div class="col-3 mb-3">
+                                    <select id="SelectionNumber" name="SelectionNumber" class="form-control shadow-none">
+                                        <option value="055">055</option>
+                                        <option value="050">050</option>
+                                        <option value="051">051</option>
+                                        <option value="070">070</option>
+                                    </select>
+                                </div>
+                                <div class="col-9 mb-3">
+                                    <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control shadow-none" placeholder="XXX-XX-XX">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <select id="category" name="category" class="form-control shadow-none">
+                                        <option value="Digital marketinq">Digital marketinq</option>
+                                        <option value="Dizayn">Dizayn</option>
+                                        <option value="Proqramlaşdırma">Proqramlaşdırma</option>
+                                        <option value="Sistem və şəbəkə">Sistem və şəbəkə</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 pb-5">
+                                    <button type="submit"
+                                            class="btn btn-warning w-100 shadow-none pt-3 pb-3 text-white fw-bold">
+                                        Müraciət
+                                        et
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

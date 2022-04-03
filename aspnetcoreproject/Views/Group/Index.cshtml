@@ -1,0 +1,42 @@
+﻿@model List<Group>
+<section id="banner">
+    <div class="item" style="background-color: #33ca7f;">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div style="padding: 130px 0px 50px 0px;">
+                        <h1 class="fw-bold text-white">Groups</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="groups">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            @foreach (Group item in Model)
+            {
+                <div class="col-4 mb-5 pt-5">
+                    <div class="card text-center" style="padding: 50px;">
+                        <img src="/uploads/categories/@item.Category.Icon" class="card-img-top" style="width: 90px;">
+                        <div class="card-body">
+                            <h5 class="card-title ">@item.Name</h5>
+                            <p class="card-text ">@item.Teacher.Name</p>
+                            <p class="card-text">Telebe sayi: 18*</p>
+                            <a href="/student/index/@item.Id" class="btn btn-success ps-5 pe-5">Ətraflı</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
